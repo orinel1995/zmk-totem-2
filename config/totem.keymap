@@ -161,7 +161,58 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MIN_PLUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PLUS>;
+            bindings = <&kp KP_MINUS>, <&kp KP_PLUS>;
+        };
+
+        td_slash: td_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+        };
+    };
+
+    macros {
+        mp_excl: excl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "EXCL";
+        };
+
+        mp_hash: mp_hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MP_HASH";
+        };
+
+        mp_hard: mp_hard {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp>;
+
+            label = "MP_HARD";
         };
     };
 
@@ -213,10 +264,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &trans    &trans     &trans
+        &kp LEFT_SHIFT  &kp F1   &kp F2   &kp F3   &kp F4      &kp F13        &kp F14    &kp F15   &kp F16    &kp F17
+        &kp F5          &kp F6   &kp F7   &kp F8   &kp HOME    &kp PG_UP      &kp LEFT   &kp UP    &kp RIGHT  &kp KP_MINUS
+&trans  &kp F9          &kp F10  &kp F11  &kp F12  &kp END     &kp PAGE_DOWN  &kp KP_N1  &kp DOWN  &kp KP_N3  &kp KP_MULTIPLY  &kp LEFT_GUI
+                                 &trans   &trans   &trans      &trans         &kp CAPS   &trans
             >;
         };
 
@@ -239,10 +290,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &grave_tilda  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET         &kp AMPERSAND  &kp ASTERISK  &kp SLASH
-        &kp N0        &kp N1           &kp N2          &kp N3        &kp N4        &kp N5         &kp N6            &kp N7         &kp N8        &kp N9
-&trans  &brace        &parent          &brackets       &quotes       &colons       &kp LESS_THAN  &kp GREATER_THAN  &kp COMMA      &kp PERIOD    &kp QUESTION  &kp PIPE
-                                       &kp KP_NUMLOCK  &kp CAPSLOCK  &trans        &min_plus      &trans            &kp EQUAL
+        &grave_tilda  &mp_excl  &kp AT_SIGN  &mp_hash        &kp DOLLAR    &kp PERCENT    &kp CARET         &kp AMPERSAND  &kp ASTERISK  &td_slash
+        &kp N0        &kp N1    &kp N2       &kp N3          &kp N4        &kp N5         &kp N6            &kp N7         &kp N8        &kp N9
+&trans  &brace        &parent   &brackets    &quotes         &colons       &kp LESS_THAN  &kp GREATER_THAN  &kp COMMA      &kp PERIOD    &kp QUESTION  &kp PIPE
+                                &trans       &kp KP_NUMLOCK  &trans        &min_plus      &trans            &kp EQUAL
             >;
         };
 
