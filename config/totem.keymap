@@ -77,6 +77,11 @@
             bindings = <&bt BT_CLR>;
             key-positions = <7 17 28 5 15 26>;
         };
+
+        bt_clr_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <7 17 28 2 12 23>;
+        };
     };
 
     behaviors {
