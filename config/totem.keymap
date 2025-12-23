@@ -72,6 +72,11 @@
             bindings = <&kp LC(LA(DEL))>;
             key-positions = <36 37 35>;
         };
+
+        bt_clr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <7 17 28 5 15 26>;
+        };
     };
 
     behaviors {
