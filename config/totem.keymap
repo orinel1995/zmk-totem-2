@@ -208,9 +208,9 @@
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_5>,
+                <&kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_5 &kp KP_NUMBER_0>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp>;
+                <&kp LEFT_ALT>;
 
             label = "MP_HARD";
         };
@@ -264,10 +264,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LEFT_SHIFT  &kp F1   &kp F2   &kp F3   &kp F4      &kp F13        &kp F14    &kp F15   &kp F16    &kp F17
-        &kp F5          &kp F6   &kp F7   &kp F8   &kp HOME    &kp PG_UP      &kp LEFT   &kp UP    &kp RIGHT  &kp KP_MINUS
-&trans  &kp F9          &kp F10  &kp F11  &kp F12  &kp END     &kp PAGE_DOWN  &kp KP_N1  &kp DOWN  &kp KP_N3  &kp KP_MULTIPLY  &kp LEFT_GUI
-                                 &trans   &trans   &trans      &trans         &kp CAPS   &trans
+        &kp LEFT_SHIFT  &kp F1   &kp F2   &kp F3   &kp F4      &kp F13        &kp F14   &kp F15    &kp F16    &kp F17
+        &kp F5          &kp F6   &kp F7   &kp F8   &kp HOME    &kp PG_UP      &kp LEFT  &kp UP     &kp RIGHT  &kp F18
+&trans  &kp F9          &kp F10  &kp F11  &kp F12  &kp END     &kp PAGE_DOWN  &mp_hard  &kp DOWN   &kp DOT    &kp QUESTION  &kp LEFT_GUI
+                                 &trans   &trans   &trans      &trans         &kp CAPS  &kp LG(L)
             >;
         };
 
