@@ -21,6 +21,12 @@
 #define TVP1 4
 #define TVP2 5
 
+&ble {
+    hids {
+        status = "okay";
+    };
+};
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
